@@ -1,25 +1,10 @@
 const axios = require("axios")
 
-const url = "http://localhost:5001/constellations/"
-
-// let constellationArray =  
-//   axios
-//     .get(url)
-
-//     .then((response) => {
-//       response.data
-//     })
-
-//     .then((data) => {
-//       console.log(data)
-//       return data
-//     })
+const url = "http://localhost:5001/constellations"
 
 
-// console.log(constellationArray)
-
-
-axios.get(url)
+axios
+  .get(url)
   .then((response) => {
     console.log("status: ", response.status, response.statusText)
     console.log("data: ", response.data)
@@ -27,4 +12,5 @@ axios.get(url)
   .catch((error)=> {
     console.log(error.message)
   })
+  .catch({message})
 
