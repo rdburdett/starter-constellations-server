@@ -97,6 +97,10 @@
       "starsWithPlanets": 3,
       "quadrant": "SQ1",
       "id": "ULE-MV1"
+    },
+    {
+      "starsWithPlanets": 9,
+      "id": "aaaaaa"
     }
   ]
 }
