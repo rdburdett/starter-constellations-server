@@ -1,16 +1,46 @@
 const axios = require("axios")
 
-const url = "http://localhost:5001/constellations"
+const BASE_URL = "http://localhost:5001";
+const constellationsUrl = `${BASE_URL}/constellations`;
 
+
+const leo = {
+  name: "Leo",
+  meaning: "Lion",
+  starsWithPlanets: 19,
+  quadrant: "NQ2",
+};
+
+//////////////////////////////////////////
+
+// axios
+//   .get(constellationsUrl)
+//   .then(({ data }) => {
+//     const exists = data.find(({ name }) => name === leo.name);
+//     if (exists) throw `Constellation "${leo.name}" already exists.`;
+//     return axios
+//       .post(constellationsUrl, leo)
+//       .then(({ data }) => console.log(data));
+//   })
+//   .catch(console.log);
+
+//////////////////////////////////////////
 
 axios
-  .get(url)
-  .then((response) => {
-    console.log("status: ", response.status, response.statusText)
-    console.log("data: ", response.data)
-  })
-  .catch((error)=> {
-    console.log(error.message)
-  })
-  .catch({message})
+.get(constellationsUrl)
+.then(({ data }) => {
+  return data.find(({ name }) => name === leo.name);
+})
+.then((exists) => {
+  if (exists) throw `Constellation "${leo.name}" already exists.`;
+  return axios
+    .post(constellationsUrl, leo)
+    .then(({ data }) => console.log(data));
+})
+.catch(console.log);
 
+//////////////////////////////////////////
+
+
+
+//////////////////////////////////////////
