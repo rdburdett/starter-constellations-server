@@ -6,9 +6,8 @@ const BASE_URL = "http://localhost:5001";
 function bulkDelete(ids) {
   const promises = ids.map((id) => {
     const url = `${BASE_URL}/constellations/${id}`
-    return axios.get(url).then(({data}) => {
-      return {id:data.id}
-    })
+    axios.delete(url)
+    return {id:id}
   })
   return Promise.all(promises)
 }
