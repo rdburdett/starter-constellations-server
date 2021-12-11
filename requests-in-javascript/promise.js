@@ -11,5 +11,17 @@ new Promise((resolve, reject) => {
     return response;
   })
   .then((response) => {
-    console.log("Add 10", response + 10);
+    console.log("Add 10:", response + 10);
   });
+
+  axios
+  .get(constellationsUrl)
+  .then(({ data }) => {
+    return data.find(({ name }) => name === leo.name);
+  })
+  .then((exists) => {
+    if (exists) throw `Constellation "${leo.name}" already exists.`;
+    return axios.post(constellationsUrl, leo);
+  })
+  .then(({ data }) => console.log(data))
+  .catch(console.log);

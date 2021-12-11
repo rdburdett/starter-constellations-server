@@ -1,6 +1,13 @@
 {
   "constellations": [
     {
+      "id": "UEUrlfX",
+      "name": "Columba",
+      "meaning": "Dove",
+      "starsWithPlanets": 3,
+      "quadrant": "SQ1"
+    },
+    {
       "id": "zb8QvVt",
       "name": "Crater",
       "meaning": "Cup",
@@ -34,6 +41,13 @@
       "meaning": "Water Snake",
       "starsWithPlanets": 5,
       "quadrant": "SQ1"
+    },
+    {
+      "id": "ISlkF4G",
+      "name": "Leo",
+      "meaning": "Lion",
+      "starsWithPlanets": 19,
+      "quadrant": "NQ2"
     },
     {
       "id": "n2OEOzp",
@@ -83,24 +97,6 @@
       "meaning": "Sails",
       "starsWithPlanets": 7,
       "quadrant": "SQ2"
-    },
-    {
-      "name": "Columba",
-      "meaning": "Dove",
-      "starsWithPlanets": 3,
-      "quadrant": "SQ1",
-      "id": "ULE-MV1"
-    },
-    {
-      "starsWithPlanets": 9,
-      "id": "aaaaaa"
-    },
-    {
-      "name": "Leo",
-      "meaning": "Lion",
-      "starsWithPlanets": 19,
-      "quadrant": "NQ2",
-      "id": "ZHEvJ5o"
     }
   ]
 }
