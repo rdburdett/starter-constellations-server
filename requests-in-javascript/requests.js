@@ -31,14 +31,14 @@ bulkDelete(['KGQIwSq', '32TN5F8']).then(console.log)
 
 
 
-// Promise.all([
-//   axios.get(`${BASE_URL}/constellations/UEUrlfX`),
-//   axios.get(`${BASE_URL}/constellations/zb8QvVt`),
-//   axios.get(`${BASE_URL}/constellations/32TN5F8`),
-// ]).then(console.log)
-  // .then((results) => {
-  //   results.forEach((result) => console.log(result.data))
-  // });
+Promise.all([
+  axios.get(`${BASE_URL}/constellations/UEUrlfX`),
+  axios.get(`${BASE_URL}/constellations/zb8QvVt`),
+  axios.get(`${BASE_URL}/constellations/32TN5F8`),
+]).then(console.log)
+  .then((results) => {
+    results.forEach((result) => console.log(result.data))
+  });
 
 // const leo = {
 //   "name": "Leo",
@@ -48,20 +48,20 @@ bulkDelete(['KGQIwSq', '32TN5F8']).then(console.log)
 //   "id": "ZHEvJ5o"
 // }
 
-// function updateIfExists(id, body) {
-//   const url = `${BASE_URL}/constellations/${id}`;
-//   return axios
-//     .get(url)
-//     .then(() => {
-//       return axios.put(url, body)
-//     })
-//     .then(({ data }) => {
-//       return data;
-//     })
-//     .catch((error) => {
-//       return error.message
-//     })
-// }
+function updateIfExists(id, body) {
+  const url = `${BASE_URL}/constellations/${id}`
+  return axios
+    .get(url)
+    .then(() => {
+      return axios.put(url, body)
+    })
+    .then(({ data }) => {
+      return data;
+    })
+    .catch((error) => {
+      return error.message
+    })
+}
 // updateIfExists("ZHEvJ5o", leo)
 
 // module.exports = {
